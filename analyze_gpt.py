@@ -56,6 +56,9 @@ for p in range(N_prob_types):
         else:
             correct_pred = False
         if not correct_pred:
+            print(all_prob.item()[prob_types[p]]['prob'][t][0][0])
+            print(all_prob.item()[prob_types[p]]['prob'][t][0][1])
+            print(all_prob.item()[prob_types[p]]['prob'][t][1][0])
             print(t, response_parsed, correct_answer)	# Print incorrect responses (to ensure there are no parsing errors)
         all_correct_pred.append(correct_pred)
     all_prob_type_correct_pred.append(all_correct_pred)
